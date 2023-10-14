@@ -1,6 +1,9 @@
 ﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">WiredBrainCoffeeBlazorServer</a>
+    <div class="container-fluid justify-content-center">
+        <a class="navbar-brand" href="">
+            <img src="TorsionalPendulum.png" class="logo"/>
+            <div>Explanatory photo</div>
+        </a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,6 +25,11 @@
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="fetchdata">
                 <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/labApparatus/list">
+                <span class="oi oi-list" aria-hidden="true"></span> LabApparatus
             </NavLink>
         </div>
     </nav>
