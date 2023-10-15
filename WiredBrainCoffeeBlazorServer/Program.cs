@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.EntityFrameworkCore;
 using WiredBrainCoffeeBlazorServer.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddDbContext<EmployeeManagerDBContext>(
+        opt => opt.UseSqlServer(
+            builder.Configuration.GetConnectionString("EmployeeManagerDB")
+));
 
 var app = builder.Build();
 
