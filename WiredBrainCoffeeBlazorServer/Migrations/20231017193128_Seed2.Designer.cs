@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WiredBrainCoffeeBlazorServer.Data;
 
@@ -11,9 +12,11 @@ using WiredBrainCoffeeBlazorServer.Data;
 namespace WiredBrainCoffeeBlazorServer.Migrations
 {
     [DbContext(typeof(EmployeeManagerDBContext))]
-    partial class EmployeeManagerDBContextModelSnapshot : ModelSnapshot
+    [Migration("20231017193128_Seed2")]
+    partial class Seed2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

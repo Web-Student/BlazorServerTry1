@@ -25,6 +25,13 @@ public class EmployeeManagerDBContext : DbContext
         modelBuilder.Entity<Employee>().HasData(
             new Employee { Id = 1, FirstName = "Anna", LastName = "Rockstar", DepartmentID = 2 },
             new Employee { Id = 2, FirstName = "Julia", LastName = "Developer", DepartmentID = 5, IsDeveloper = true },
-            new Employee { Id = 3, FirstName = "Mary", LastName = "Poppins", DepartmentID = 10 }) ;
+            new Employee { Id = 3, FirstName = "Mary", LastName = "Poppins", DepartmentID = 10 },
+            new Employee { Id = 4, FirstName = "Mary Jane", LastName = "Parker", DepartmentID = 2, IsDeveloper = true },
+            new Employee { Id = 5, FirstName = "Bob", LastName = "Poppins", DepartmentID = 4 },
+            new Employee { Id = 6, FirstName = "J. Ava", LastName = "Script", DepartmentID = 10 , IsDeveloper = true},
+            new Employee { Id = 7, FirstName = "C. ", LastName = "Sharp", DepartmentID = 10, IsDeveloper = true },
+            new Employee { Id = 8, FirstName = "C", LastName = "Plus Plus", DepartmentID = 1, IsDeveloper = true },
+            new Employee { Id = 9, FirstName = "Blazor", LastName = "Server Jr", DepartmentID = 5, IsDeveloper = true },
+            new Employee { Id = 10, FirstName = "Monty", LastName = "Python", DepartmentID = 5, IsDeveloper = false }) ;
     }
 }
